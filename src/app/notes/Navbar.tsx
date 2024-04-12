@@ -2,7 +2,7 @@
 
 import logo from "@/assets/logo.png";
 // import AIChatButton from "@/components/AIChatButton";
-// import AddEditNoteDialog from "@/components/AddEditNoteDialog";
+import AddEditNoteDialog from "@/components/AddEditNoteDialog";
 // import ThemeToggleButton from "@/components/ThemeToggleButton";
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
@@ -11,12 +11,12 @@ import { Plus } from "lucide-react";
 // import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-// import { useState } from "react";
+import { useState } from "react";
 
 export default function NavBar() {
 //   const { theme } = useTheme();
 
-//   const [showAddEditNoteDialog, setShowAddEditNoteDialog] = useState(false);
+  const [showAddEditNoteDialog, setShowAddEditNoteDialog] = useState(false);
 
   return (
     <>
@@ -35,7 +35,7 @@ export default function NavBar() {
               }}
             />
             {/* <ThemeToggleButton /> */}
-            <Button onClick={() => {}}>
+            <Button onClick={() => setShowAddEditNoteDialog(true)}>
               <Plus size={20} className="mr-2" />
               Add Note
             </Button>
@@ -43,10 +43,10 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-      {/* <AddEditNoteDialog
+      <AddEditNoteDialog
         open={showAddEditNoteDialog}
         setOpen={setShowAddEditNoteDialog}
-      /> */}
+      />
     </>
   );
 }
