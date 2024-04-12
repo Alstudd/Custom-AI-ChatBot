@@ -1,7 +1,7 @@
 "use client";
 
 import logo from "@/assets/logo.png";
-// import AIChatButton from "@/components/AIChatButton";
+import AIChatButton from "@/components/AIChatButton";
 import AddEditNoteDialog from "@/components/AddEditNoteDialog";
 import ThemeToggleButton from "@/components/ThemeToggleButton";
 import { Button } from "@/components/ui/button";
@@ -39,7 +39,7 @@ export default function NavBar() {
               <Plus size={20} className="mr-2" />
               Add Note
             </Button>
-            {/* <AIChatButton /> */}
+            <AIChatButton />
           </div>
         </div>
       </div>
